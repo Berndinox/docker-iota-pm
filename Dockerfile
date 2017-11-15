@@ -1,9 +1,9 @@
 FROM node:9.1.0
 
-RUN npm install -g iota-pm
+COPY /docker-entrypoint.sh /
+RUN npm install -g iota-pm && chmod +x /docker-entrypoint.sh
 EXPOSE 80
 
-COPY /docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 
