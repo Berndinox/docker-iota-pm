@@ -1,4 +1,4 @@
-FROM node:9.1.0-alpine
+FROM node:9.1.0
 
 RUN useradd --user-group --create-home --shell /bin/false app
 ENV HOME=/home/app
